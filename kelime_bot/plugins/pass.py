@@ -41,6 +41,8 @@ async def passs(c:Client, m:Message):
 ✍🏻 𝖴𝗓𝗎𝗇𝗅uk: {int(len(kelime_list)/2)} 
 
 ✏️ Karışık harflerden doğru kelimeyi bulun
+
+♻️ Pass Geç 👉🏻 /pass 👈🏻
             """
             await c.send_message(m.chat.id, text)
             
