@@ -14,8 +14,8 @@ keyboard = InlineKeyboardMarkup([
         InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/KelimeHazinesiBot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇹🇷 Sahibim", url="https://t.me/nevarevladim"),
-        InlineKeyboardButton("💬 Chat", url="https://t.me/+0kf_3zSzsCszZWJk"),
+        InlineKeyboardButton("🇹🇷 Sahipler", url="https://t.me/mytsahip"),
+        InlineKeyboardButton("🎙️ Müzik Botu", url="https://t.me/Myt_Music_Bot"),
     ]
 ])
 
@@ -28,7 +28,7 @@ START = """
 
 HELP = """
 **✌️ Komutlar Menüsüne Hoşgeldiniz.**
-/game - Oyunu başlatmak için..
+/turet - Oyunu başlatmak için..
 /pass - Üç adet hakkınız mevcut, oyunu geçmek için.. 
 /skor - Oyuncular arasındaki rekabet bilgisi..
 /cancel - Oyundan çıkmak için gerekli olan komuttur.. 
@@ -44,7 +44,7 @@ async def help(bot, message):
   await message.reply_photo("https://i.ibb.co/K6QTywd/images-17.jpg",caption=HELP) 
 
 # Oyunu başlat. 
-@Client.on_message(filters.command("game")) 
+@Client.on_message(filters.command("turet")) 
 async def kelimeoyun(c:Client, m:Message):
     global oyun
     aktif = False
@@ -80,6 +80,8 @@ async def kelimeoyun(c:Client, m:Message):
 ✍🏻 Uzunluk : {int(len(kelime_list)/2)} 
 
 ✏️ Karışık harflerden doğru kelimeyi bulun
+
+♻️ Pass Geç 👉🏻 /pass 👈🏻
         """
         await c.send_message(m.chat.id, text)
         
